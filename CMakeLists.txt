@@ -7,7 +7,7 @@ project(medInria-plugins-private)
 include(PluginsConfig)
 
 PluginVersionNumber(2 0 2)
-PluginSetDependencies(VTK ITK TTK RPI medInria)
+PluginSetDependencies(VTK ITK TTK RPI)
 
 #   Eventually add libraries specific to this plugin here.
 
@@ -17,4 +17,4 @@ add_plugin(ITKProcessExample ON)
 
 #   Packaging. This should always be the last command.
 
-#include(PluginPackaging)
+#include(PluginPackaging )
