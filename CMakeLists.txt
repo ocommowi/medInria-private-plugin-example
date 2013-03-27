@@ -7,7 +7,8 @@ project(medInria-plugins-private)
 include(PluginsConfig)
 
 PluginVersionNumber(2 0 2)
-PluginSetDependencies(VTK ITK TTK RPI)
+
+find_package(MedInriaSuperProject REQUIRED)
 
 #   Eventually add libraries specific to this plugin here.
 

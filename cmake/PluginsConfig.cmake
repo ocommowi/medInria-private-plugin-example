@@ -1,6 +1,5 @@
 include(AddPlugin)
 include(PluginVersionNumber)
-include(PluginDependencies)
 
 #   Export medinria-plugins_DIR variable so that internal project can automatically find it
 
