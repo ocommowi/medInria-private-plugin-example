@@ -83,13 +83,15 @@ target_link_libraries(${PROJECT_NAME}
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 
-add_executable(${PROJECT_NAME}Testing
-  ITKProcessExampleTestingApp.cpp
-)
+if (BUILD_EXAMPLES)
+  add_executable(${PROJECT_NAME}Testing
+    ITKProcessExampleTestingApp.cpp
+  )
 
-target_link_libraries(${PROJECT_NAME}Testing
-  ${PROJECT_NAME}
-)
+  target_link_libraries(${PROJECT_NAME}Testing
+    ${PROJECT_NAME}
+  )
+endif()
 
 ## #################################################################
 ## Install rules
