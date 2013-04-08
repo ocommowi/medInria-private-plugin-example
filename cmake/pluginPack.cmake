@@ -28,6 +28,8 @@ set(CPACK_BINARY_TZ OFF)
 
 if (APPLE)
   set(CPACK_BINARY_PACKAGEMAKER ON)
+
+  set(CPACK_INSTALL_SCRIPT "execute_process(COMMAND \${PROJECT_BINARY_DIR}/fix_apple_links.sh)")
 endif()
 
 include(CPack)

@@ -21,8 +21,6 @@ add_plugin(ITKProcessExample ON)
 if (APPLE)
   configure_file(${PROJECT_SOURCE_DIR}/fix_apple_links.sh.in
                  ${PROJECT_BINARY_DIR}/fix_apple_links.sh)
-
-  install(CODE "execute_process(COMMAND \${PROJECT_BINARY_DIR}/fix_apple_links.sh)")
 endif()
 
 # Packaging. This should always be the last command.
