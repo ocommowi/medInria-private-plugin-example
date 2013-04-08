@@ -25,6 +25,6 @@ if (APPLE)
   install(CODE "execute_process(COMMAND \${PROJECT_BINARY_DIR}/fix_apple_links.sh)")
 endif()
 
-#   Packaging. This should always be the last command.
+# Packaging. This should always be the last command.
 
-#include(PluginPackaging )
+include(pluginPack)
