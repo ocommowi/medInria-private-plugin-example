@@ -19,8 +19,14 @@ add_plugin(ITKProcessExample ON)
 # Install post-processing code testing
 
 if (APPLE)
-  configure_file(${PROJECT_SOURCE_DIR}/fix_apple_links.sh.in
-                 ${PROJECT_BINARY_DIR}/fix_apple_links.sh)
+  configure_file(${PROJECT_SOURCE_DIR}/fix_apple_links_and_package.sh.in
+                 ${PROJECT_BINARY_DIR}/tmp_fix_apple_links_and_package.sh.in)
+
+  configure_file(${PROJECT_BINARY_DIR}/tmp_fix_apple_links_and_package.sh.in
+                 ${PROJECT_BINARY_DIR}/fix_apple_links_and_package.sh)
+
+  configure_file(${PROJECT_SOURCE_DIR}/cmake/ApplePackScript.cmake.in
+                 ${PROJECT_BINARY_DIR}/ApplePackScript.cmake)
 endif()
 
 # Packaging. This should always be the last command.
